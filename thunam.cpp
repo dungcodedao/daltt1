@@ -134,8 +134,7 @@ void sxten(sv a[], int n){
         case 5: 
              lkgpa2(a, n);
              break;
-        case 6 :
-             sxten(a, n);
+        case 0 :
              break;
              		
 		default:
