@@ -69,18 +69,6 @@ void lkgpa(sv a[], int n){
 bool cmp1(sv a, sv b){
 	return a.gpa >b.gpa;
 }
-void lkgpa2(sv a[], int n){
-	vector<sv> v;
-	for (int i = 0; i < n; i++){
-		if(a[i].gpa >= 3) v.push_back(a[i]);
-			
-	}
-	sort(v.begin(), v.end(), cmp1);
-	cout << " Danh sach cac sinh vien co diem GPA >=3: \n";
-	for (sv x : v){
-	    x.in();
-    }
-}
 string chuanhoa(string name){
 	stringstream ss(name); vector<string> v;
 	string token, res = " ";
@@ -111,7 +99,6 @@ void sxten(sv a[], int n){
  		cout << "2. Hien thi toan bo danh sach sinh vien\n";
  		cout << "3. Tim kiem sinh vien theo masv \n";
  		cout << "4. Liet ke sinh vien co diem GPA cao nhat \n";
- 		cout << "5. Liet ke cac sinh vien co diem GPA >= 3 \n";
  		cout << "6. Thoat chuong trinh! \n";
  		switch(lc){
         case 1: {
@@ -131,9 +118,7 @@ void sxten(sv a[], int n){
              lkgpa(a, n);
             break;
 
-        case 5: 
-             lkgpa2(a, n);
-             break;
+ 
         case 0 :
              break;
              		
